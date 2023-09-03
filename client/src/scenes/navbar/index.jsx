@@ -1,15 +1,15 @@
+import { useState } from "react";
 import {
   Box,
+  IconButton,
+  InputBase,
   Typography,
   Select,
   MenuItem,
   FormControl,
-  IconButton,
   useTheme,
   useMediaQuery,
-  InputBase,
 } from "@mui/material";
-import { useState } from "react";
 import {
   Search,
   Message,
@@ -38,11 +38,12 @@ const Navbar = () => {
   const background = theme.palette.background.default;
   const primaryLight = theme.palette.primary.light;
   const alt = theme.palette.background.alt;
-  const fullName="";
-  if(user !==null){
-  fullName = `${user.firstName} ${user.lastName}`;
-  }
-  
+
+  var fullName="";
+      if(user !==null){
+      fullName = `${user.firstName} ${user.lastName}`;
+      }
+
   return (
     <FlexBetween padding="1rem 6%" backgroundColor={alt}>
       <FlexBetween gap="1.75rem">
@@ -197,3 +198,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+      
